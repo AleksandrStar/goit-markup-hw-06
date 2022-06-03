@@ -22,6 +22,8 @@
   --card-line: #eeeeee;
   /* Переменная зазоров между карточками*/
   --filter-list-card: 30px;
+  /* Функция разделения времени в переходах*/
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--main-font);
@@ -124,6 +126,7 @@ img {
   line-height: 1.14;
   color: var(--basic-color);
   letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function);
 }
 .navigation-header-list .link:hover,
 .navigation-header-list .link:focus {
@@ -142,6 +145,7 @@ img {
   letter-spacing: 0.02em;
   font-style: normal;
   color: var(--secondary-color);
+  transition: color 250ms var(--timing-function);
 }
 .contacts-header-list .email:hover,
 .contacts-header-list .email:focus {
@@ -156,6 +160,7 @@ img {
   letter-spacing: 0.02em;
   font-style: normal;
   color: var(--secondary-color);
+  transition: color 250ms var(--timing-function);
 }
 .contacts-header-list .phone:hover,
 .contacts-header-list .phone:focus {
@@ -167,7 +172,7 @@ img {
   fill: currentColor;
 }
 /* Декорации ссылок шапки сайта (акцент нахождения на разделе) */
-.navigation-header-list .link:hover::after {
+.current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -223,6 +228,7 @@ img {
   background-color: var(--accent-color);
   color: var(--button);
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -408,6 +414,7 @@ img {
   background-color: #ffffff;
   color: #afb1b8;
   border-radius: 50%;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -446,6 +453,7 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .klient-link:hover,
 .klient-link:focus {
@@ -467,6 +475,8 @@ img {
   color: var(--basic-color);
   text-align: center;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -494,6 +504,7 @@ img {
   flex-basis: calc(100% / 3 - var(--filter-list-card));
   margin-top: var(--filter-list-card);
   margin-left: var(--filter-list-card);
+  transition: box-shadow 250ms var(--timing-function);
 }
 .portfolio-content-direction {
   padding: 20px 24px;
@@ -535,12 +546,12 @@ img {
 }
 .submenu {
   position: absolute;
-  left: 0;
   bottom: 0;
   width: 100%;
-  height: 294px;
+  top: 0;
   padding: 63px 24px;
   margin: 0;
+  list-style: none;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -551,8 +562,11 @@ img {
   display: none;
 }
 .portfolio-link:hover .submenu {
+  height: 294px;
   display: block;
+  transition: background 250ms var(--timing-function);
 }
+
 /* ------------------ Подвал ------------------ */
 /* Ссылка с логотипом футера */
 .footer {
@@ -593,6 +607,7 @@ img {
   font-weight: 400;
   line-height: 1.71;
   color: var(--office);
+  transition: color 250ms var(--timing-function);
 }
 .footer-contact:hover,
 .footer-contact:focus,
@@ -620,6 +635,7 @@ img {
   color: #ffffff;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  transition: background 250ms var(--timing-function);
 }
 .socials-link-footer:hover,
 .socials-link-footer:focus {
