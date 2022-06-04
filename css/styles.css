@@ -553,7 +553,7 @@ img {
   bottom: 0;
   width: 100%;
   top: 0;
-  height: 294px;
+  height: 100%;
   padding: 63px 24px;
   margin: 0;
   list-style: none;
@@ -565,6 +565,7 @@ img {
   background: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   display: none;
+  transform: translateY(101%);
   animation: from-bottom-to-top 1s;
 }
 .portfolio-link:hover .submenu {
@@ -572,12 +573,16 @@ img {
   transition: background 250ms var(--timing-function);
   animation-direction: alternate;
 }
+.portfolio-link:hover .submenu,
+.portfolio-link:focus .submenu {
+  transform: translateY(0);
+}
 @keyframes from-bottom-to-top {
   from {
-    transform: translatey(294px);
+    transform: translateY(0px);
   }
   to {
-    transform: translatey(0px);
+    transform: translateY(-294px);
   }
 }
 /* ------------------ Подвал ------------------ */
