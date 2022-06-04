@@ -572,7 +572,6 @@ img {
 }
 .portfolio-link:hover .submenu {
   display: block;
-  animation-direction: alternate;
 }
 .portfolio-link:hover .submenu,
 .portfolio-link:focus .submenu {
