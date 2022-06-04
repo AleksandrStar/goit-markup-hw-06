@@ -567,24 +567,23 @@ img {
   color: #ffffff;
   display: none;
   transform: translateY(101%);
-  animation: from-bottom-to-top 2s;
+  animation: from-top-to-bottom 250ms var(--timing-function);
   transition: transform 750ms;
 }
 .portfolio-link:hover .submenu {
   display: block;
-  transition: background 250ms var(--timing-function);
   animation-direction: alternate;
 }
 .portfolio-link:hover .submenu,
 .portfolio-link:focus .submenu {
   transform: translateY(0);
 }
-@keyframes from-bottom-to-top {
+@keyframes from-top-to-bottom {
   from {
-    transform: translateY(0px);
+    transform: translateY(294px);
   }
   to {
-    transform: translateY(-294px);
+    transform: translateY(0px);
   }
 }
 /* ------------------ Подвал ------------------ */
