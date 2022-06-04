@@ -547,6 +547,7 @@ img {
 /* Cубменю*/
 .picture {
   position: relative;
+  overflow: hidden;
 }
 .submenu {
   position: absolute;
@@ -566,7 +567,8 @@ img {
   color: #ffffff;
   display: none;
   transform: translateY(101%);
-  animation: from-bottom-to-top 1s;
+  animation: from-bottom-to-top 2s;
+  transition: transform 750ms;
 }
 .portfolio-link:hover .submenu {
   display: block;
