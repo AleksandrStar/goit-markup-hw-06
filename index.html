@@ -55,6 +55,45 @@
           <button type="button" class="hero-button" data-modal-open click>Заказать услугу</button>
           <div class="backdrop is-hidden" data-backdrop>
             <div class="modal">
+              <form class="modal-window">
+                <p class="modal-window-ad">Оставьте свои данные, мы вам перезвоним</p>
+                <div class="modal-window-field">
+                  <div class="input-field">
+                    <label class="input-information" for="name">Имя</label>
+                    <input type="text" name="name" id="name" autofocus />
+                  </div>
+                  <div class="input-field">
+                    <label class="input-information" for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel" />
+                  </div>
+                  <div class="input-field">
+                    <label class="input-information" for="mail">Почта</label>
+                    <input type="email" name="mail" id="mail" />
+                  </div>
+                  <div class="input-field">
+                    <label class="input-information" for="comment">Коментарий</label>
+                    <textarea
+                      name="comment"
+                      id="comment"
+                      cols=""
+                      rows="12"
+                      placeholder="Введите текст"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="modal-window-checkbox">
+                  <input
+                    type="checkbox"
+                    name="mailing-list"
+                    value="mailing-list"
+                    id="mailing-list"
+                  />
+                  <label for="">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                </div>
+                <div class="modal-window-button">
+                  <button type="submit">Отправить</button>
+                </div>
+              </form>
               <button class="modal-btn" data-modal-close click>
                 <svg class="icon-vector-btn" width="30" height="30">
                   <use href="./images/sprite.svg#icon-vector-btn"></use>
