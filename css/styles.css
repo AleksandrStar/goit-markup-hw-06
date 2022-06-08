@@ -49,6 +49,8 @@ address {
 }
 textarea {
   resize: none;
+  max-width: 448px;
+  max-height: 120px;
 }
 /* Убираем маркеры неупорядоченого списка */
 .list {
@@ -237,7 +239,7 @@ img {
 .hero-button:focus {
   background-color: var(--accent-color-hover);
 }
-/* Модальное окно */
+/* ----------------------Модальное окно-------------------- */
 .backdrop {
   position: fixed;
   left: 0;
@@ -258,14 +260,13 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
   padding: 15px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.modal-btn {
+.modal-btn-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -279,8 +280,23 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
+.icon-vector-btn:checked + .modal-btn-close::after {
+  color: var(--accent-color-hover);
+}
 .modal-window-ad {
-  margin: 40px 40px 12px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  width: 448px;
+  color: #212121;
 }
 .modal-window-field {
   display: flex;
@@ -288,15 +304,137 @@ img {
   margin-left: 40px;
   margin-right: 40px;
 }
+.input-information {
+  display: flex;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+  align-items: flex-start;
+}
 .input-field {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
-.input-field:not(:last-child) {
+.form-input {
+  padding-left: 42px;
+  max-width: 448px;
+  min-height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.input-field textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-input:not(:last-child) {
   margin-bottom: 10px;
 }
 .input-information:not(:last-child) {
   margin-bottom: 4px;
+}
+.form-input:hover {
+  border-color: var(--accent-color-hover);
+}
+.input-field textarea:hover {
+  border-color: var(--accent-color-hover);
+}
+.icon-checkbox {
+  position: absolute;
+  top: 35px;
+  left: 12px;
+  transform: translateY(-35%);
+  color: #212121;
+}
+.input-field:focus-within > .icon-checkbox {
+  background-color: var(--accent-color-hover);
+}
+.input-information textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-window-checkbox input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.tick-checkbox {
+  width: 16px;
+  margin-right: 7px;
+  background: #2196f3;
+  border-radius: 2px;
+}
+.tick-checkbox:checked + .icon-tick-checkbox::after {
+  color: var(--accent-color-hover);
+}
+.tick-checkbox:checked + .icon-tick-checkbox {
+  background-size: contain;
+  background-origin: content-box;
+  background: #ffffff;
+  border: 0.2px solid #ffffff;
+}
+.icon-tick-checkbox:hover {
+  color: var(--accent-color-hover);
+}
+.modal-window-checkbox {
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.contract-conditions-checkbox {
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.modal-button-send {
+  padding: 10px 0;
+  padding-right: auto;
+  padding-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  width: 200px;
+  min-width: 89px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.modal-button-send:hover,
+.modal-button-send:focus {
+  background-color: var(--accent-color-hover);
 }
 /* ------------------ Приемущества ------------------ */
 /* Приемущества работы */
@@ -662,7 +800,7 @@ img {
 }
 .team-name-footer {
   font-weight: 700;
-  line-height: 1.14px;
+  line-height: 1.14;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -680,4 +818,74 @@ img {
 .socials-link-footer:hover,
 .socials-link-footer:focus {
   background-color: #2196f3;
+}
+/* Приглашение на рассылку футера */
+.footer-mailing-lists {
+  display: flex;
+}
+.invitation-mailing-lists {
+  width: 219px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.email-mailing-lists .placeholder {
+  width: 47px;
+  height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.email-mailing-lists {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-button-subscribe {
+  display: flex;
+}
+.button-subscribe {
+  position: relative;
+  padding: 10px 28px;
+  max-width: 200px;
+  min-width: 143px;
+  min-height: 50px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-subscribe:hover,
+.button-subscribe:focus {
+  background-color: var(--accent-color-hover);
+}
+.icon-button-send {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+}
+.footer-mailing-address {
+  display: flex;
 }
