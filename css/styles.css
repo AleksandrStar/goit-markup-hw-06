@@ -260,7 +260,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  padding: 15px;
+  padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -295,7 +295,6 @@ img {
   padding: 0;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 40px;
   margin-bottom: 12px;
   font-style: normal;
   font-weight: 700;
@@ -309,8 +308,6 @@ img {
 .modal-window-field {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 .input-information {
   display: flex;
@@ -349,6 +346,9 @@ img {
   margin-bottom: 4px;
 }
 .form-input:hover {
+  border-color: var(--accent-color-hover);
+}
+.form-input:focus-within {
   border-color: var(--accent-color-hover);
 }
 .input-field textarea:hover {
@@ -448,12 +448,9 @@ img {
   color: var(--accent-color-hover);
 }
 .modal-button-send {
-  padding: 10px 0;
+  padding: 10px 55px;
   padding-right: auto;
-  padding-left: auto;
-  margin-right: auto;
   margin-left: auto;
-  margin-bottom: 40px;
   width: 200px;
   min-width: 89px;
   font-style: normal;
@@ -848,8 +845,6 @@ img {
 /* Приглашение на рассылку футера */
 .box-invitation-mailing-lists {
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 .invitation-mailing-lists {
   margin-left: 93px;
@@ -888,7 +883,6 @@ img {
   background-color: var(--dark-bg);
 }
 .button-subscribe {
-  position: absolute;
   margin-left: 12px;
   position: relative;
   min-width: 200px;
@@ -915,7 +909,6 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .icon-button-send {
-  position: fixed;
   top: 85%;
   left: 99%;
   transform: translate(-85%, -99%);
