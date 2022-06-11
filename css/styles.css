@@ -860,6 +860,7 @@ img {
   align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 .email-mailing-lists {
   box-sizing: border-box;
@@ -897,14 +898,8 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .icon-send {
-  background-image: url('../images/icons/icon-send.svg');
+  background-image: url('../images/icons/icon-send1.svg');
   bottom: 50%;
-  left: 52px;
-  transform: translate(-52px, 50%);
-  background-color: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
-}
-.icon-send:hover,
-.icon-send:focus {
-  background-color: var(--accent-color-hover);
+  left: 50px;
+  transform: translate(-50px, 50%);
 }
