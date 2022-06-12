@@ -786,6 +786,9 @@ img {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-item {
+  width: 231px;
+}
 /* Список контактов футера */
 .footer-contact {
   line-height: 1.71;
@@ -861,8 +864,6 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
-}
-.email-mailing-lists {
   box-sizing: border-box;
   width: 358px;
   height: 50px;
@@ -900,6 +901,6 @@ img {
 .icon-send {
   background-image: url('../images/icons/icon-send1.svg');
   bottom: 50%;
-  left: 50px;
-  transform: translate(-50px, 50%);
+  left: 52px;
+  transform: translate(-52px, 50%);
 }
